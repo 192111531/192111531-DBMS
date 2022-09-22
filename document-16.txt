@@ -1,0 +1,12 @@
+mysql> CREATE FUNCTION hey (s CHAR(20))
+    -> RETURNS CHAR(50) DETERMINISTIC
+    -> RETURN CONCAT('hai, ',s,'!');
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> SELECT hey('hai');
++-----------------+
+| hey('hai')   |
++-----------------+
+| hey, hai! |
++-----------------+
+1 row in set (0.00 sec)
